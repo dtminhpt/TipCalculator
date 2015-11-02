@@ -25,27 +25,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
-
-        //set focus to bill field
+        // Set focus to bill field
         billField.becomeFirstResponder()
         
-        //Load new percentage
-        let billAmount: Double! = (userDefaults.objectForKey("bill"))!.doubleValue as Double
-        let tipPercentage: Double! = (userDefaults.objectForKey(("tip"))!.doubleValue) as Double
-        let tipIndex = (userDefaults.integerForKey("ind"))
-        print(tipPercentage)
+        // Load previous data
+        var billAmount = userDefaults.doubleForKey("bill")
+        var tipPercentage = userDefaults.doubleForKey("tip")
+        var tipIndex = userDefaults.integerForKey("ind")
         
-        
-        if(billAmount == nil){
-            billField.text = "100"
-            tipLabel.text = "10"
-            totalLabel.text = "110"
-            tipControl.selectedSegmentIndex = 0
+        // Set for initial values
+        if (billAmount == 0) {
+            billAmount = 100.0
             userDefaults.setObject(billAmount, forKey: "bill")
         }
+        if (tipPercentage == 0) {
+            tipPercentage = 0.1
+            tipIndex = 0
+            userDefaults.setObject(tipPercentage, forKey: "tip")
+            userDefaults.setObject(tipIndex, forKey: "ind")
+        }
         
-        billField.text = String(format:"%.1f", billAmount)
+        billField.text = String(format:"%.2f", billAmount)
         let tip = billAmount * tipPercentage
         let total = billAmount + tip
         tipControl.selectedSegmentIndex = tipIndex
@@ -116,14 +116,11 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         print("view will appear")
         
-        //Load new Percentage
-        let tipPercentage: Double! = (userDefaults.objectForKey(("tip"))!.doubleValue) as Double
-        let tipIndex = (userDefaults.integerForKey("ind"))
-        
+        // Load previous data
+        let tipPercentage = userDefaults.doubleForKey("tip")
+        let tipIndex = userDefaults.integerForKey("ind")
         
         let billAmount = Double((billField.text! as NSString).doubleValue)
-        
-        
         
         tipControl.selectedSegmentIndex = tipIndex
         
