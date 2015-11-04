@@ -94,23 +94,6 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
-    @IBAction func btnSave(sender: UIButton) {
-        let billAmount = Double((billField.text! as NSString).doubleValue)
-        let tipPercentages = [0.1, 0.15, 0.2]
-
-        let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
-        let index = tipControl.selectedSegmentIndex
-        
-        
-        //Save
-        userDefaults.setObject(billAmount, forKey: "bill")
-        userDefaults.setObject(tipPercentage, forKey: "tip")
-        userDefaults.setInteger(index, forKey: "ind")
-        userDefaults.synchronize()
-        
-    }
-    
     //VIEW CONTROLLER LIFE CYCLE
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
