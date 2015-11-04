@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         case 0:
             self.view.backgroundColor = UIColor.redColor()
         case 1:
-            self.view.backgroundColor = UIColor.blueColor()
+            self.view.backgroundColor = UIColor.whiteColor()
         case 2:
             self.view.backgroundColor = UIColor.greenColor()
         default:
@@ -122,7 +122,7 @@ class ViewController: UIViewController {
         case 0:
             self.view.backgroundColor = UIColor.redColor()
         case 1:
-            self.view.backgroundColor = UIColor.blueColor()
+            self.view.backgroundColor = UIColor.whiteColor()
         case 2:
             self.view.backgroundColor = UIColor.greenColor()
         default:
