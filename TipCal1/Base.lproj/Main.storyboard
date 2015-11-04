@@ -202,22 +202,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENS-WF-g3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="AVq-d7-fPy">
-            <objects>
-                <tabBarController id="pO3-i9-KgM" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="X5D-Ro-nPg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="9je-1b-Gy0" kind="relationship" relationship="viewControllers" id="ohz-mF-PUp"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JFp-4p-wsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
